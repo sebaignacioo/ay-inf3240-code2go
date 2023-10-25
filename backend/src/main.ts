@@ -1,4 +1,5 @@
 import 'dotenv/config';
+import bcrypt from 'bcrypt';
 import app from './api/app';
 
 import AppDataSource from './data';
@@ -13,7 +14,7 @@ const initializeAdminUser = async () => {
     const usuario = repo.create({
       username: 'admin',
       email: 'admin@admin.com',
-      password: 'admin123',
+      password: await bcrypt.hash('admin123', 10),
       rol: 'admin',
     });
     await repo.save(usuario);
