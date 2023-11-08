@@ -189,10 +189,10 @@ Cada ruta tiene las siguientes descripciones:
 
 | Tipo  | Ruta | Descripción | Restricciones de acceso                               | Estado            |
 | ----- | ---- | ----------- | ----------------------------------------------------- | ----------------- |
-| `GET` | `/`  | Permite obtener todos los perfiles de usuario. | **Admin:** Todos los perfiles de la base de datos. | `🔴 Por comenzar` |
-| `GET` | `/:username`  | Permite obtener el perfil de un usuario en específico. | **Público:** La ruta debe ser de acceso público. | `🔴 Por comenzar` |
-| `PUT` | `/:username`  | Permite actualizar el perfil de un usuario en específico. | <ul><li>**Mismo usuario:** Solo a su mismo usuario.</li><li>**Admin:** Todos los perfiles de usuario.</li></ul> | `🔴 Por comenzar` |
-| `DELETE` | `/:username`  | Permite eliminar el perfil de un usuario en específico. | <ul><li>**Mismo usuario:** Solo a su mismo usuario.</li><li>**Admin:** Todos los perfiles de usuario.</li></ul> | `🔴 Por comenzar` |
+| `GET` | `/`  | Permite obtener todos los perfiles de usuario. | **Admin:** Todos los perfiles de la base de datos. | `✅ Listo!` |
+| `GET` | `/:username`  | Permite obtener el perfil de un usuario en específico. | **Público:** La ruta debe ser de acceso público. | `✅ Listo!` |
+| `PUT` | `/:username`  | Permite actualizar el perfil de un usuario en específico. | <ul><li>**Mismo usuario:** Solo a su mismo usuario.</li><li>**Admin:** Todos los perfiles de usuario.</li></ul> | `✅ Listo!` |
+| `DELETE` | `/:username`  | Permite eliminar el perfil de un usuario en específico. | <ul><li>**Mismo usuario:** Solo a su mismo usuario.</li><li>**Admin:** Todos los perfiles de usuario.</li></ul> | `✅ Listo!` |
 
 #### Ruta `/bloques`
 

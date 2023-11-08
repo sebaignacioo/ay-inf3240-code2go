@@ -32,7 +32,7 @@ export class Usuario {
   @Column({ type: 'text', length: 20 })
   rol: string;
 
-  @OneToOne(() => Perfil)
+  @OneToOne(() => Perfil, { onDelete: 'CASCADE' })
   @JoinColumn()
   perfil: Perfil;
 

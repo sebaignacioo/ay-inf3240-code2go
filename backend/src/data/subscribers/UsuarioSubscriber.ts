@@ -28,6 +28,7 @@ export class UsuarioSubscriber implements EntitySubscriberInterface<Usuario> {
 
     await perfilRepository.save(perfil);
     usuario.perfil = perfil;
+    usuario.password = await bcrypt.hash(usuario.password, 10);
   }
 
   async beforeUpdate(event: UpdateEvent<Usuario>) {

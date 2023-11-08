@@ -43,7 +43,20 @@ function adminGuard(req: Request, res: Response, next: NextFunction): void {
   next();
 }
 
+function mismoUserGuard(req: Request, res: Response, next: NextFunction): void {
+  const { username } = req.params;
+  const token = (req as CustomRequest).token;
+  if (token.rol !== 'admin' && token.username !== username) {
+    res.status(403).send({
+      message: 'Error: No tienes permisos para acceder a este recurso',
+    });
+    return;
+  }
+  next();
+}
+
 export default {
   authGuard,
   adminGuard,
+  mismoUserGuard,
 };
